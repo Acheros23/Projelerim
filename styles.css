@@ -1,85 +1,170 @@
-/* Google Fonts için ekleme */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
 /* Genel Arka Plan Ayarı */
 .custom-background {
-    background-color: #5f5d5d !important;
+    background-image: url('https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?cs=srgb&dl=pexels-joyston-judah-331625-933054.jpg&fm=jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
     font-family: 'Poppins', sans-serif;
-    /* Yazı tipi değiştirildi */
     color: #000000;
     transition: background-color 0.3s ease-in-out;
 }
 
 /* Form Kutusu */
 .form-container {
-    max-width: 500px;
-    background-color: #ffffff;
+    max-width: 800px;
+    width: 75%;
+    background-repeat: no-repeat;
     border: 1px solid #ccc;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     border-radius: 10px;
-    /* Kenarları yuvarlatıldı */
-}
-
-.form-container:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+    overflow-y: auto;
+    backdrop-filter: blur(5px);
+    /* Blur uyguluyoruz */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Hafif şeffaf beyaz, arka planın bulanık gözükmesini sağlar */
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Hafif saydam bir kenarlık ekleyebiliriz */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Formun daha belirgin olmasını sağlayan bir gölge */
 }
 
 /* Başlık */
 .form-container h2 {
-    color: #444;
-    font-size: 1.8rem;
-    /* Başlık boyutu arttırıldı */
+    color: #000000;
+    font-size: 2.5rem;
     font-weight: 600;
     text-align: center;
     margin-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Form Etiketleri ve Alanları */
 .form-label {
     font-weight: 600;
-    /* Daha kalın yapıldı */
     color: #000;
+    margin-bottom: 8px;
 }
 
-/* Form Alanlarının Arka Plan Rengi */
+/* Genel form-control alanı */
 .form-control {
-    background-color: #f7f7f7;
+    background-color: transparent;
     color: #000;
+    border: 2px solid #ccc;
     border-radius: 5px;
-    /* Kenarları yuvarlatıldı */
+    padding: 10px;
+    /* Genel padding */
+    margin-bottom: 15px;
+    height: 40px;
+    box-sizing: border-box;
+    width: 100%;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* İkonlu inputlar için özel padding */
+.input-with-icon .form-control {
+    padding-left: 50px;
+    /* İkon olan alanlar için ekstra sol boşluk */
+}
+
+/* Placeholder text hizalaması */
+.form-control::placeholder {
+    color: #999;
+    opacity: 1;
 }
 
 /* Odaklanıldığında Input Alanları */
 .form-control:focus {
     border-color: #4a90e2;
     box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+    background-color: rgba(74, 144, 226, 0.05);
+}
+
+/* İkonları Saydamlaştırma ve Inputlarla Hizalama */
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+/* İkonları hizalama ve düzenleme */
+.input-group-text {
+    background-color: transparent;
+    border: 2px solid #ccc;
+    color: #000;
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+/* İkonu inputun dışında tutmak için */
+.input-group .form-control {
+    padding-left: 50px;
+    /* İkon için padding */
+}
+
+/* Küçük Ekranlar için Duyarlı Düzenleme */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+    }
+
+    .form-control {
+        width: 100%;
+    }
 }
 
 /* Butonlar */
 .btn-primary {
-    background-color: #4a90e2;
-    border: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: transparent;
+    border: 2px solid #4a90e2;
+    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
     border-radius: 5px;
-    /* Kenarları yuvarlatıldı */
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
 }
 
 .btn-primary:hover {
-    background-color: #357ab8;
+    background-color: rgba(74, 144, 226, 0.1);
+    border-color: #357ab8;
     transform: translateY(-2px) scale(1.05);
 }
 
 .btn-secondary {
-    background-color: #6c757d;
-    border: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: transparent;
+    border: 2px solid #6c757d;
+    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
     border-radius: 5px;
-    /* Kenarları yuvarlatıldı */
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
 }
 
 .btn-secondary:hover {
-    background-color: #5a6268;
+    background-color: rgba(108, 117, 125, 0.1);
+    border-color: #5a6268;
     transform: translateY(-2px) scale(1.05);
 }
