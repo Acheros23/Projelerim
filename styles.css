@@ -1,0 +1,85 @@
+/* Google Fonts için ekleme */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Genel Arka Plan Ayarı */
+.custom-background {
+    background-color: #5f5d5d !important;
+    font-family: 'Poppins', sans-serif;
+    /* Yazı tipi değiştirildi */
+    color: #000000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Form Kutusu */
+.form-container {
+    max-width: 500px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+    /* Kenarları yuvarlatıldı */
+}
+
+.form-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Başlık */
+.form-container h2 {
+    color: #444;
+    font-size: 1.8rem;
+    /* Başlık boyutu arttırıldı */
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Etiketleri ve Alanları */
+.form-label {
+    font-weight: 600;
+    /* Daha kalın yapıldı */
+    color: #000;
+}
+
+/* Form Alanlarının Arka Plan Rengi */
+.form-control {
+    background-color: #f7f7f7;
+    color: #000;
+    border-radius: 5px;
+    /* Kenarları yuvarlatıldı */
+}
+
+/* Odaklanıldığında Input Alanları */
+.form-control:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+/* Butonlar */
+.btn-primary {
+    background-color: #4a90e2;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 5px;
+    /* Kenarları yuvarlatıldı */
+}
+
+.btn-primary:hover {
+    background-color: #357ab8;
+    transform: translateY(-2px) scale(1.05);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 5px;
+    /* Kenarları yuvarlatıldı */
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px) scale(1.05);
+}

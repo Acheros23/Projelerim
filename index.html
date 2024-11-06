@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Formu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="custom-background d-flex justify-content-center align-items-center min-vh-100">
+    <form class="form-container shadow p-4 rounded">
+        <h2 class="text-center">Kayıt Formu</h2>
+        <p class="text-center text-muted">Hızlıca kayıt olun!</p>
+
+        <div class="mb-3">
+            <label for="mail" class="form-label"><b>E-Posta:</b></label>
+            <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                <input required placeholder="xxxxx@gmail.com" id="mail" type="email" class="form-control">
+            </div>
+            <small class="text-muted">Kayıtlı e-posta adresinizi girin.</small>
+        </div>
+
+        <div class="mb-3">
+            <label for="k" class="form-label"><b>Kullanıcı Adı:</b></label>
+            <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-person"></i></span>
+                <input required maxlength="20" id="k" type="text" class="form-control">
+            </div>
+            <small class="text-muted">Maksimum 20 karakter uzunluğunda.</small>
+        </div>
+
+        <div class="mb-3">
+            <label for="ş" class="form-label"><b>Şifre:</b></label>
+            <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                <input required id="ş" type="password" class="form-control">
+            </div>
+            <small class="text-muted">Güçlü bir şifre oluşturun.</small>
+        </div>
+
+        <div class="mb-3">
+            <label for="tarih" class="form-label"><b>Doğum Tarihi:</b></label>
+            <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                <input required type="date" id="tarih" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-check">
+            <input required type="checkbox" class="form-check-input" id="rules">
+            <label for="rules" class="form-check-label">Kuralları kabul ediyorum</label>
+        </div>
+
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="info" checked>
+            <label for="info" class="form-check-label">Bilgilendirme almak istiyorum</label>
+        </div>
+
+        <div class="mt-3">
+            <label class="form-check-label me-2">
+                <input required type="radio" name="cinsiyet" class="form-check-input"> Erkek
+            </label>
+            <label class="form-check-label">
+                <input type="radio" name="cinsiyet" class="form-check-input"> Kadın
+            </label>
+        </div>
+
+        <input type="hidden" name="test" value="test">
+
+        <div class="d-flex gap-2 mt-4">
+            <button type="submit" class="btn btn-primary w-50">Gönder</button>
+            <button type="reset" class="btn btn-secondary w-50">Sıfırla</button>
+        </div>
+
+        <!-- Ek Açıklama Ekleme Butonu ve Container -->
+        <button type="button" class="btn btn-secondary mt-3" id="addDescriptionButton">Ek Açıklama Ekle</button>
+        <div class="description-container mt-3"></div>
+    </form>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
